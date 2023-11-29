@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gestionpcdashboard/utils/utils.dart';
-import 'package:gestionpcdashboard/widgets/add_student.dart';
+import 'package:gestionpcdashboard/widgets/add_pc.dart';
 
-class ApprenantComponent extends StatefulWidget {
-  const ApprenantComponent({super.key});
+ class PcComponent extends StatefulWidget {
+  const PcComponent({super.key});
 
+ 
   @override
-  State<ApprenantComponent> createState() => _ApprenantComponentState();
+  State<PcComponent> createState() => _PcComponentState();
 }
 
-class _ApprenantComponentState extends State<ApprenantComponent> {
+class _PcComponentState extends State<PcComponent> {
   int selectedIndex = 0;
   void goToBack() {
     setState(() {
@@ -20,7 +21,7 @@ class _ApprenantComponentState extends State<ApprenantComponent> {
   @override
   Widget build(BuildContext context) {
     return selectedIndex != 0
-        ? StudentAdd(
+        ? Pcadd(
             goToback: goToBack,
           )
         : Expanded(
